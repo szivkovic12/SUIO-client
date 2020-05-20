@@ -8,6 +8,7 @@ import { AssetsComponent } from './assets/assets.component';
 import { EmployeeAddComponent } from './employee-add/employee-add.component';
 import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { TypeComponent } from './type/type.component';
 
 
 
@@ -18,7 +19,8 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
     AssetsComponent,
     EmployeeAddComponent,
     EmployeeEditComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    TypeComponent
   ],
   imports: [
     BrowserModule,
