@@ -8,7 +8,7 @@ import { catchError, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AssetService {
-  private assetsUrl = `http://localhost:8080/asset/`;
+  private assetsUrl = `http://localhost:8080/assets/`;
   constructor(
     private http: HttpClient
   ) { }
