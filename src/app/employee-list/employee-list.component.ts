@@ -9,6 +9,8 @@ import { EmployeeService } from '../employee.service';
 })
 export class EmployeeListComponent implements OnInit {
   employees: Employee[];
+  toastrService: any;
+
   constructor(private employeeService: EmployeeService) { }
   ngOnInit(): void {
     this.getEmployee();
@@ -17,5 +19,14 @@ export class EmployeeListComponent implements OnInit {
   getEmployee(): void {
     this.employeeService.getEmployees().subscribe(employees => this.employees = employees);
   }
+
+  deleteEmployee(employee:Employee){
+    this.employees= this.employees.filter(e => e !== employee);
+    this.employeeService.deleteEmployee(employee).subscribe(
+      () => this.toastrService.success('Uspješno ste obrisali zaposlenika!')
+    );
+    
+    }
+
 
 }

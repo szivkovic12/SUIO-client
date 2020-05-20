@@ -6,22 +6,24 @@
       <table class="table table-striped">
         <thead>
           <tr>
+            <th>Id</th>
             <th>Ime</th>
             <th>Prezime</th>
             <th>Oib</th>
             <th>Email</th>
+            <th>Delete</th>
+            <th>Update</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let employee of employees">
+            <td>{{employee.id}}</td>
             <td>{{employee.name}}</td>
             <td>{{employee.surname}}</td>
             <td>{{employee.oib}}</td>
             <td>{{employee.email}}</td>
-            <td><button  class="btn btn-danger">Delete</button>
-                <button  class="btn btn-info" style="margin-left: 10px">Update</button>
-                <button  class="btn btn-info" style="margin-left: 10px">Details</button>
-            </td>
+            <td><button (click)="deleteEmployee(employee)" class="btn btn-danger">Delete</button></td>
+            <td> <button  class="btn btn-info" style="margin-left: 10px">Update</button></td>
           </tr>
         </tbody>
       </table>
