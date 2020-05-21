@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AssetService} from './asset.service';
 import { Asset} from './asset.model';
+import { Router } from '@angular/router';
+import { Observable, of } from 'rxjs';
+
 @Component({
   selector: 'app-assets',
   templateUrl: './assets.component.html',
@@ -9,7 +12,7 @@ import { Asset} from './asset.model';
 export class AssetsComponent implements OnInit {
 
   assets: Asset[];
-  constructor(private assetService: AssetService) { }
+  constructor(private assetService: AssetService, private router: Router) { }
   ngOnInit(): void {
     this.getAssets();
   }
@@ -17,5 +20,20 @@ export class AssetsComponent implements OnInit {
   getAssets(): void {
     this.assetService.getAssets().subscribe(assets => this.assets = assets);
   }
+  deleteAsset(asset: Asset){
+    this.assets= this.assets.filter(e => e !== asset);
+    this.assetService.deleteAsset(asset).subscribe();
 
+  }
+  updateAsset(asset: Asset){
+    this.assets= this.assets.filter(e => e !== asset);
+    this.router.navigate(['/assets/edit', asset.id])
+  }
+  navigateToDetail(asset: Asset){
+    this.assets= this.assets.filter(e => e !== asset);
+    this.router.navigate(['/assets/details/', asset.id])
+  }
+  navigateToCreate(): void {
+    this.router.navigate(['/assets/create'])
+  }
 }

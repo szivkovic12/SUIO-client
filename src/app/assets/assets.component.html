@@ -1,6 +1,29 @@
-<p>Assets:</p>
-<ul>
-  <li *ngFor="let asset of assets">
-    {{ asset.name }}
-    </li>
-</ul>
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Asset list</h1>
+</div>
+<div>
+    <table class="table">
+      <thead>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Serijal number</th>
+        <th scope="col">Product Number</th>
+        <th scope="col">Date of Disposal</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Update</th>
+        <th scope="col">Details</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let asset of assets" scope="row">
+          <td>{{ asset.id }}</td>
+          <td>{{ asset.name }}</td>
+          <td>{{ asset.serialNumber }}</td>
+          <td>{{ asset.productNumber }}</td>
+          <td>{{ asset.dateOfDisposal | date:"medium" }}</td>
+          <td><button (click)="deleteAsset(asset)" class="btn btn-danger">Delete</button></td>
+          <td><button (click)="updateAsset(asset)" class="btn btn-info" style="margin-left: 10px">Update</button></td>
+          <td><button (click)="navigateToDetail(asset)" class="btn btn-info" style="margin-left: 10px">Details</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
