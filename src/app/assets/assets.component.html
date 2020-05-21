@@ -14,8 +14,8 @@
         <th scope="col">Details</th>
       </thead>
       <tbody>
-        <tr *ngFor="let asset of assets" scope="row">
-          <td>{{ asset.id }}</td>
+        <tr *ngFor="let asset of assets; index as i" scope="row">
+          <td>{{ i+1 }}</td>
           <td>{{ asset.name }}</td>
           <td>{{ asset.serialNumber }}</td>
           <td>{{ asset.productNumber }}</td>
