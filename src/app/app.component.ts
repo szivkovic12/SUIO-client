@@ -8,8 +8,15 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'SUIO-client';
   constructor(private router: Router) { }
+
+ 
+  navigateToAdd(): void {
+    this.router.navigate(['employee/add'])
+  }
+  
   navigateToCreate(): void {
     this.router.navigate(['/assets/create'])
   }
+
 }
 
