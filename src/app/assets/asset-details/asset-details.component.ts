@@ -21,8 +21,8 @@ export class AssetDetailsComponent implements OnInit {
         return this.assetService.getAsset(id);
       }
       )
-    ).subscribe((student: Asset) => {
-      this.asset = student;
+    ).subscribe((asset: Asset) => {
+      this.asset = asset;
     });
   }
   backClicked() {
