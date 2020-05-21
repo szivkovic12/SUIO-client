@@ -13,6 +13,7 @@
             <th>Email</th>
             <th>Delete</th>
             <th>Update</th>
+            <th>Details</th>
           </tr>
         </thead>
         <tbody>
@@ -23,7 +24,8 @@
             <td>{{employee.oib}}</td>
             <td>{{employee.email}}</td>
             <td><button (click)="deleteEmployee(employee)" class="btn btn-danger">Delete</button></td>
-            <td> <button  class="btn btn-info" style="margin-left: 10px">Update</button></td>
+            <td> <button (click)="updateEmployee(employee)"  class="btn btn-info" style="margin-left: 10px">Update</button></td>
+            <td> <button (click)="navigateToDetail(employee)" class="btn btn-info" style="margin-left: 10px">Details</button></td>
           </tr>
         </tbody>
       </table>

@@ -4,9 +4,9 @@ export class Employee{
     surname:string;
     oib:string;
      email:string;
-    dateOfBirth:Date;
+    date_of_birth:Date;
     department:number;
     role:number;
-    dateOfEmployment:Date;
+    date_of_employment:Date;
 
 }

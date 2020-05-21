@@ -20,16 +20,18 @@ export class EmployeeAddComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.employee=new Employee();
   }
 
   navigateToCreate():void{
     this.router.navigate(['/employee/add'])
   }
 
-  createNewEmployee() {
+  createNewEmployee():void {
     this.employeeService.addEmployee(this.employee).subscribe(
       (employee: Employee) => {
         this.employee = employee;
+        new Promise(resolve => setTimeout(resolve,2000)).then(()=>this.router.navigate(['employee']));
         this.toastrService.success('Uspješno ste spremili podatke zaposlenika!');
       },
       () => {

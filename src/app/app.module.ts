@@ -9,6 +9,7 @@ import { EmployeeAddComponent } from './employee-add/employee-add.component';
 import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { TypeComponent } from './type/type.component';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 
 
 
@@ -20,7 +21,8 @@ import { TypeComponent } from './type/type.component';
     EmployeeAddComponent,
     EmployeeEditComponent,
     EmployeeListComponent,
-    TypeComponent
+    TypeComponent,
+    EmployeeDetailsComponent
   ],
   imports: [
     BrowserModule,

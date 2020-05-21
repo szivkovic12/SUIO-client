@@ -1,22 +1,52 @@
-<h3>Create Employee</h3>
-<div style="width: 400px;">
-  <form>
-    <div class="form-group">
-      <label for="name">First Name</label>
-      <input type="text" class="form-control" id="surname" required [(ngModel)]="employee.name" name="name">
+<h1 class="h3 mb-0 text-gray-800">Add employee</h1>
+<div class="container">
+    <div class="card-body">
+            <div class="form-group">
+                <label>Name</label>
+                <input [(ngModel)]="employee.name" type="text" class="form-control" id="name" name="name"
+                    placeholder="name" required>
+            </div>
+            <div class="form-group">
+                <label>Surname</label>
+                <input [(ngModel)]="employee.surname" type="text" class="form-control" id="surname" name="surname"
+                    placeholder="surname" required>
+            </div>
+            <div class="form-group">
+                <label>Oib</label>
+                <input [(ngModel)]="employee.oib" type="text" class="form-control" id="oib" name="oib"
+                    minlength="11" maxlength="11" placeholder="oib" required>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input [(ngModel)]="employee.email" type="text" class="form-control" id="email" name="email"
+                    minlength="5" maxlength="20" placeholder="email">
+            </div>
+            <div class="form-group">
+                <label>Date Of birth</label><br/>
+                <input [(ngModel)]="employee.date_of_birth"  type="date" id="birthday" name="birthday">
+            </div> 
+            <div class="form-group">
+                <label>Department</label>
+                <input [(ngModel)]="employee.department" type="text" class="form-control" id="department" name="department"
+                     maxlength="10" placeholder="department">
+            </div>
+            <div class="form-group">
+                <label>Role</label>
+                <input [(ngModel)]="employee.role" type="text" class="form-control" id="role" name="role"
+                     maxlength="10" placeholder="role" required>
+            </div>
+                <label>Date Of employment</label><br/>
+                <input [(ngModel)]="employee.date_of_employment"  type="date" id="dateofEmployment" name="dateofEmployment">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="float-right">
+                        <button routerLink="/employee" class="btn btn-outline-secondary mr-4"
+                            type="button">Cancel</button>
+                        <button (click)="createNewEmployee()" class="btn btn-success"
+                            type="button">Save
+                        </button>
+                    </div>
+                </div>
+            </div>
     </div>
-
-    <div class="form-group">
-      <label for="name">Last Name</label>
-      <input type="text" class="form-control" id="surname" required [(ngModel)]="employee.surname" name="surname">
-    </div>
-
-    <div class="form-group">
-      <label for="name">First Name</label>
-      <input type="text" class="form-control" id="email" required [(ngModel)]="employee.email" name="email">
-    </div>
-
-    <button type="submit" class="btn btn-success">Submit</button>
-  </form>
-</div>
-
+</div>  

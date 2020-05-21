@@ -9,7 +9,7 @@ import { Employee } from './employee.model';
 })
 export class EmployeeService {
   private employeeUrl = `http://localhost:8080/employee/`;
-  private employeeAddUrl = `http://localhost:8080/employee/add`;
+ 
   constructor(
     private http: HttpClient
   ) { }
@@ -23,9 +23,25 @@ export class EmployeeService {
   }
 
   addEmployee(employee: Employee): Observable<Employee> {
-    return this.http.post<Employee>(this.employeeAddUrl, employee).pipe(
+    return this.http.post<Employee>(this.employeeUrl, employee).pipe(
       tap((newEmployee: Employee) => console.log(`added employee w/ ID=${newEmployee.id}`)),
       catchError(this.handleError<Employee>('addEmployee'))
+    );
+  }
+
+  getEmployee(id: string): Observable<Employee> {
+    return this.http.get<Employee>(this.employeeUrl+id)
+      .pipe(
+        tap(_ => console.log('fetched employee by id')),
+        catchError(this.handleError<Employee>('getEmployee'))
+      );
+  }
+
+  updateEmployee(employee: Employee): Observable<any> {
+    const url = `${this.employeeUrl}/${employee.id}`;
+    return this.http.put(url, employee).pipe(
+      tap(_ => console.log(`updated employee`)),
+      catchError(this.handleError<any>('updateEmployee'))
     );
   }
 
