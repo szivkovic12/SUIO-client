@@ -9,9 +9,9 @@ import { EmployeeAddComponent } from './employee-add/employee-add.component';
 import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { TypeComponent } from './type/type.component';
-
-
-
+import { AssetCreateComponent } from './assets/asset-create/asset-create.component';
+import { AssetEditComponent } from './assets/asset-edit/asset-edit.component';
+import { AssetDetailsComponent } from './assets/asset-details/asset-details.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,10 @@ import { TypeComponent } from './type/type.component';
     EmployeeAddComponent,
     EmployeeEditComponent,
     EmployeeListComponent,
-    TypeComponent
+    TypeComponent,
+    AssetCreateComponent,
+    AssetEditComponent,
+    AssetDetailsComponent
   ],
   imports: [
     BrowserModule,
