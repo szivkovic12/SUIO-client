@@ -1,0 +1,18 @@
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">{{ type?.name }}</h1>
+</div>
+<div>
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>Id</td>
+          <td>{{ type?.id }}</td>
+        </tr>
+        <tr>
+          <td>Type name</td>
+          <td>{{ type?.name }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button (click)="backClicked()" type="button" class="btn btn-primary btn-sm">Back</button>

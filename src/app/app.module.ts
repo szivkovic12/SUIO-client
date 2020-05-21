@@ -12,6 +12,7 @@ import { TypeComponent } from './type/type.component';
 import { AssetCreateComponent } from './assets/asset-create/asset-create.component';
 import { AssetEditComponent } from './assets/asset-edit/asset-edit.component';
 import { AssetDetailsComponent } from './assets/asset-details/asset-details.component';
+import { TypeDetailComponent } from './type/type-detail/type-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AssetDetailsComponent } from './assets/asset-details/asset-details.comp
     TypeComponent,
     AssetCreateComponent,
     AssetEditComponent,
-    AssetDetailsComponent
+    AssetDetailsComponent,
+    TypeDetailComponent
   ],
   imports: [
     BrowserModule,

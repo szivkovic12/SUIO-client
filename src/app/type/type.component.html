@@ -16,7 +16,7 @@
           <td>{{ type.name }}</td>
           <td><button  class="btn btn-danger">Delete</button>
             <button  class="btn btn-info" style="margin-left: 10px">Update</button>
-            <button  class="btn btn-info" style="margin-left: 10px">Details</button>
+            <button (click)="navigateToDetail(type)"  class="btn btn-info" style="margin-left: 10px">Details</button>
         </td>
         </tr>
       </tbody>
