@@ -21,6 +21,35 @@ export class TypeService {
         catchError(this.handleError<Type[]>('getType', []))
       );
   }
+  getTypeById(id: number): Observable<Type> {
+    return this.http.get<Type>(this.typeUrl+id)
+      .pipe(
+        tap(_ => console.log('fetched type by id')),
+        catchError(this.handleError<Type>('getType'))
+      );
+  }
+  addType(type: Type): Observable<Type> {
+    return this.http.post<Type>(this.typeUrl, type).pipe(
+      tap(_ => console.log('fetched type')),
+      catchError(this.handleError<Type>('addType'))
+    );
+  }  
+  updateType(type: Type): Observable<any> {
+    const url = `${this.typeUrl}/${type.id}`;
+    return this.http.put(url, type).pipe(
+      tap(_ => console.log(`updated type`)),
+      catchError(this.handleError<any>('updateType'))
+    );
+  }
+  deleteAsset(type: Type | number): Observable<Type> {
+    const id = typeof type === 'number' ? type : type.id;
+    const url = `${this.typeUrl}${id}`;
+
+    return this.http.delete<Type>(url).pipe(
+      tap(_ => console.log(`deleted type id=${id}`)),
+      catchError(this.handleError<Type>('deleteType'))
+    );
+  }
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(operation);

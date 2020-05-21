@@ -1,0 +1,34 @@
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">{{ asset?.name }}</h1>
+</div>
+<div>
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>Serial Number</td>
+          <td>{{ asset?.serialNumber }}</td>
+        </tr>
+        <tr>
+          <td>Product Number</td>
+          <td>{{ asset?.productNumber }}</td>
+        </tr>
+        <tr>
+            <td>Type ID</td>
+            <td>{{ asset?.typeId }}</td>
+          </tr>
+          <tr>
+            <td>Date of Purchase</td>
+            <td>{{ asset?.dateOfPurchase | date:"medium" }}</td>
+          </tr>
+          <tr>
+            <td>Status</td>
+            <td>{{ asset?.status }}</td>
+          </tr>
+          <tr>
+            <td>Date of Disposal</td>
+            <td>{{ asset?.dateOfDisposal | date:"medium" }}</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  <button (click)="backClicked()" type="button" class="btn btn-primary btn-sm">Back</button>

@@ -1,4 +1,5 @@
 export class Asset {
+    id: number;
     name: string;
     serialNumber: string;
     productNumber: string;

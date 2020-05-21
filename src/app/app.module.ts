@@ -10,8 +10,10 @@ import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { TypeComponent } from './type/type.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
-
-
+import { AssetCreateComponent } from './assets/asset-create/asset-create.component';
+import { AssetEditComponent } from './assets/asset-edit/asset-edit.component';
+import { AssetDetailsComponent } from './assets/asset-details/asset-details.component';
+import { TypeDetailComponent } from './type/type-detail/type-detail.component';
 
 
 @NgModule({
@@ -22,7 +24,12 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
     EmployeeEditComponent,
     EmployeeListComponent,
     TypeComponent,
-    EmployeeDetailsComponent
+    EmployeeDetailsComponent,
+    AssetCreateComponent,
+    AssetEditComponent,
+    AssetDetailsComponent,
+    TypeDetailComponent
+
   ],
   imports: [
     BrowserModule,
