@@ -1,6 +1,5 @@
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Type list</h1>
-    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Add new type</a>
 </div>
 
 <div class="panel-body">
@@ -14,8 +13,8 @@
         <tr *ngFor="let type of types" scope="row">
           <td>{{ type.id }}</td>
           <td>{{ type.name }}</td>
-          <td><button  class="btn btn-danger">Delete</button>
-            <button  class="btn btn-info" style="margin-left: 10px">Update</button>
+          <td><button (click)="deleteType(type)"   class="btn btn-danger">Delete</button>
+            <button (click)="updateType(type)"  class="btn btn-info" style="margin-left: 10px">Update</button>
             <button (click)="navigateToDetail(type)"  class="btn btn-info" style="margin-left: 10px">Details</button>
         </td>
         </tr>

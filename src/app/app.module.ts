@@ -14,6 +14,9 @@ import { AssetCreateComponent } from './assets/asset-create/asset-create.compone
 import { AssetEditComponent } from './assets/asset-edit/asset-edit.component';
 import { AssetDetailsComponent } from './assets/asset-details/asset-details.component';
 import { TypeDetailComponent } from './type/type-detail/type-detail.component';
+import { TypeUpdateComponent } from './type/type-update/type-update.component';
+import { NoviTipComponent } from './novi-tip/novi-tip.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -28,14 +31,17 @@ import { TypeDetailComponent } from './type/type-detail/type-detail.component';
     AssetCreateComponent,
     AssetEditComponent,
     AssetDetailsComponent,
-    TypeDetailComponent
+    TypeDetailComponent,
+    TypeUpdateComponent,
+    NoviTipComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

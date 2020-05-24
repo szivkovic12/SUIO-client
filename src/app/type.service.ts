@@ -30,20 +30,21 @@ export class TypeService {
   }
   addType(type: Type): Observable<Type> {
     return this.http.post<Type>(this.typeUrl, type).pipe(
-      tap(_ => console.log('fetched type')),
+      tap((newType: Type) => console.log('add type')),
       catchError(this.handleError<Type>('addType'))
     );
   }  
   updateType(type: Type): Observable<any> {
-    const url = `${this.typeUrl}/${type.id}`;
+    const url = `${this.typeUrl}update/${type.id}`;
     return this.http.put(url, type).pipe(
       tap(_ => console.log(`updated type`)),
       catchError(this.handleError<any>('updateType'))
     );
   }
-  deleteAsset(type: Type | number): Observable<Type> {
+
+  deleteType(type: Type | number): Observable<Type> {
     const id = typeof type === 'number' ? type : type.id;
-    const url = `${this.typeUrl}${id}`;
+    const url = `${this.typeUrl}delete/${id}`;
 
     return this.http.delete<Type>(url).pipe(
       tap(_ => console.log(`deleted type id=${id}`)),
