@@ -28,6 +28,16 @@ export class TypeComponent implements OnInit {
     this.types= this.types.filter(e => e !== type);
     this.router.navigate(['/type/', type.id])
   }
+
+  deleteType(type: Type){
+    this.types= this.types.filter(e => e !== type);
+    this.typeService.deleteType(type).subscribe();
+  }
+
+  updateType(type: Type){
+    this.types = this.types.filter(e => e !== type);
+    this.router.navigate(['type/update', type.id])
+  }
  
 
 }
