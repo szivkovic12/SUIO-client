@@ -1,7 +1,15 @@
 {
-    "language":{
+    "menu":{
         "croatian": "Croatian",
-        "english": "English"
+        "english": "English",
+        "addNewType": "Add new type",
+        "typeList": "Type List",
+        "newAsset": "Add new asset",
+        "assetList": "Asset list",
+        "asset": "ASSET",
+        "addEmpl": "Add new employess",
+        "emplList": "Employee list",
+        "empl": "Employees"
     },
     "button":{
         "cancle": "Cancle",

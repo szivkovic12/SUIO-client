@@ -1,7 +1,15 @@
 {
-    "language":{
+    "menu":{
         "croatian": "Hrvatski",
-        "english": "Engleski"
+        "english": "Engleski",
+        "addNewType": "Dodaj novu grupu",
+        "typeList": "Lista grupa",
+        "newAsset": "Dodaj novu opremu",
+        "assetList": "Lista opreme",
+        "asset": "OPREMA",
+        "addEmpl": "Dodaj novog djelatnika",
+        "emplList": "Lista djelatnika",
+        "empl": "Djelatnici"
     },
     "button":{
         "cancle": "Odustani",

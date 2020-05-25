@@ -12,69 +12,59 @@
     </a>
 
     <!-- Divider -->
-    <hr class="sidebar-divider my-0">
-
-    <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
-      <a class="nav-link" href="index.html">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span></a>
-    </li>
-
-    <!-- Divider -->
-    <hr class="sidebar-divider">
+    <hr class="sidebar-divider my-0">    
 
     <!-- Heading -->
     <div class="sidebar-heading">
-      Employees
+      {{'menu.empl' | translate}}
     </div>
 
     <!-- Nav Item - Assets -->
     <li class="nav-item">
       <a class="nav-link" routerLink="employee" routerLinkActive="active">
         <i class="fas fa-fw fa-chart-area"></i>
-        <span>Employee list</span></a>
+        <span>{{'menu.emplList' | translate}}</span></a>
     </li>
 
     <!-- Nav Item - Assets -->
     <li class="nav-item">
       <a class="nav-link" routerLink="employee/add" routerLinkActive="active" (click)="navigateToAdd">
         <i class="fas fa-fw fa-chart-area"></i>
-        <span>Add Employee</span></a>
+        <span>{{'menu.addEmpl' | translate}}</span></a>
     </li>
     <!-- Divider -->
     <hr class="sidebar-divider">
 
     <!-- Heading -->
     <div class="sidebar-heading">
-      Assets
+      {{'menu.asset' | translate}}
     </div>
 
     <!-- Nav Item - Assets -->
     <li class="nav-item">
       <a class="nav-link" routerLink="assets" routerLinkActive="active">
         <i class="fas fa-fw fa-chart-area"></i>
-        <span>Asset list</span></a>
+        <span>{{'menu.assetList' | translate}}</span></a>
     </li>
 
     <!-- Nav Item - Assets -->
     <li class="nav-item">
       <a (click)="navigateToCreate()" class="nav-link" routerLink="assets" routerLinkActive="active">
         <i class="fas fa-fw fa-chart-area"></i>
-        <span>New Asset</span></a>
+        <span>{{'menu.newAsset' | translate}}</span></a>
     </li>
 
     <!-- Nav Item - Type -->
     <li class="nav-item">
       <a class="nav-link" routerLink="type" routerLinkActive="active">
         <i class="fas fa-fw fa-table"></i>
-        <span>Type list</span></a>
+        <span>{{'menu.typeList' | translate}}</span></a>
     </li>
 
     <li class="nav-item">
       <a class="nav-link" routerLink="tip/novi" routerLinkActive="active">
         <i class="fas fa-fw fa-table"></i>
-        <span>Add new type</span></a>
+        <span>{{'menu.addNewType' | translate}}</span></a>
     </li>
 
     <!-- Divider -->
@@ -96,10 +86,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item">
-              <a class="nav-link" (click)="switchLanguage('hr')">{{'language.croatian' | translate}}</a>
+              <a class="nav-link" (click)="switchLanguage('hr')">{{'menu.croatian' | translate}}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" (click)="switchLanguage('en')">{{'language.english' | translate}}</a>
+              <a class="nav-link" (click)="switchLanguage('en')">{{'menu.english' | translate}}</a>
             </li>
           </ul>
         </div>
