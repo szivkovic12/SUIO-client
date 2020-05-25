@@ -1,176 +1,147 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <router-outlet></router-outlet>
-        </div>
-    </div>
-</div>
-
 <div id="wrapper">
 
-    <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+  <!-- Sidebar -->
+  <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-        <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-left justify-content-left" >
-            <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
-            </div>
-            <div class="sidebar-brand-text mx-2">SUIO</div>
-        </a>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider my-0">
-
-        <!-- Nav Item - Dashboard -->
-        <li class="nav-item active">
-            <a class="nav-link" href="index.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a>
-        </li>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider">
-
-        <!-- Heading -->
-        <div class="sidebar-heading">
-            Employees
-        </div>
-
-        <!-- Nav Item - Assets -->
-        <li class="nav-item">
-            <a class="nav-link" routerLink="employee" routerLinkActive="active">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Employee list</span></a>
-        </li>
-
-          <!-- Nav Item - Assets -->
-          <li class="nav-item">
-            <a class="nav-link" routerLink="employee/add" routerLinkActive="active" (click)="navigateToAdd">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Add Employee</span></a>
-        </li>
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Assets
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-left justify-content-left">
+      <div class="sidebar-brand-icon rotate-n-15">
+        <i class="fas fa-laugh-wink"></i>
       </div>
+      <div class="sidebar-brand-text mx-2">SUIO</div>
+    </a>
 
-      <!-- Nav Item - Assets -->
-      <li class="nav-item">
-        <a class="nav-link" routerLink="assets" routerLinkActive="active">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Asset list</span></a>
-      </li>
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">    
 
-      <!-- Nav Item - Assets -->
-      <li class="nav-item">
-        <a (click)="navigateToCreate()" class="nav-link" routerLink="assets" routerLinkActive="active">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>New Asset</span></a>
-      </li>
+    <!-- Heading -->
+    <div class="sidebar-heading">
+      {{'menu.empl' | translate}}
+    </div>
 
-      <!-- Nav Item - Type -->
-      <li class="nav-item">
-        <a class="nav-link" routerLink="type" routerLinkActive="active">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Type list</span></a>
-      </li>
+    <!-- Nav Item - Assets -->
+    <li class="nav-item">
+      <a class="nav-link" routerLink="employee" routerLinkActive="active">
+        <i class="fas fa-fw fa-chart-area"></i>
+        <span>{{'menu.emplList' | translate}}</span></a>
+    </li>
 
-      <li class="nav-item">
-        <a class="nav-link" routerLink="tip/novi" routerLinkActive="active">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Add new type</span></a>
-      </li>
+    <!-- Nav Item - Assets -->
+    <li class="nav-item">
+      <a class="nav-link" routerLink="employee/add" routerLinkActive="active" (click)="navigateToAdd">
+        <i class="fas fa-fw fa-chart-area"></i>
+        <span>{{'menu.addEmpl' | translate}}</span></a>
+    </li>
+    <!-- Divider -->
+    <hr class="sidebar-divider">
 
-      <!-- Divider -->
-      <hr class="sidebar-divider d-none d-md-block">
+    <!-- Heading -->
+    <div class="sidebar-heading">
+      {{'menu.asset' | translate}}
+    </div>
 
-    </ul>
-    <!-- End of Sidebar -->
+    <!-- Nav Item - Assets -->
+    <li class="nav-item">
+      <a class="nav-link" routerLink="assets" routerLinkActive="active">
+        <i class="fas fa-fw fa-chart-area"></i>
+        <span>{{'menu.assetList' | translate}}</span></a>
+    </li>
 
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
+    <!-- Nav Item - Assets -->
+    <li class="nav-item">
+      <a (click)="navigateToCreate()" class="nav-link" routerLink="assets" routerLinkActive="active">
+        <i class="fas fa-fw fa-chart-area"></i>
+        <span>{{'menu.newAsset' | translate}}</span></a>
+    </li>
 
-      <!-- Main Content -->
-      <div id="content">
+    <!-- Nav Item - Type -->
+    <li class="nav-item">
+      <a class="nav-link" routerLink="type" routerLinkActive="active">
+        <i class="fas fa-fw fa-table"></i>
+        <span>{{'menu.typeList' | translate}}</span></a>
+    </li>
 
-        <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-         
-          <!-- Topbar Navbar -->
-          <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="tip/novi" routerLinkActive="active">
+        <i class="fas fa-fw fa-table"></i>
+        <span>{{'menu.addNewType' | translate}}</span></a>
+    </li>
 
-            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-            <li class="nav-item dropdown no-arrow d-sm-none">
-              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-search fa-fw"></i>
-              </a>
-              <!-- Dropdown - Messages -->
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-                <form class="form-inline mr-auto w-100 navbar-search">
-                  <div class="input-group">
-                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search fa-sm"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
+
+  </ul>
+  <!-- End of Sidebar -->
+
+  <!-- Content Wrapper -->
+  <div id="content-wrapper" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
+
+      <!-- Topbar -->
+      <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+        <!-- Topbar Navbar -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" (click)="switchLanguage('hr')">{{'menu.croatian' | translate}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="switchLanguage('en')">{{'menu.english' | translate}}</a>
             </li>
           </ul>
-        </nav>
-        <!-- End of Topbar -->
+        </div>
 
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
-          <!-- Content Row -->
-          <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <router-outlet></router-outlet>
-                </div>
+      </nav>
+      <!-- End of Topbar -->
+
+      <!-- Begin Page Content -->
+      <div class="container-fluid">
+        <!-- Content Row -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <router-outlet></router-outlet>
             </div>
-        </div>
-
-        </div>
-        <!-- /.container-fluid -->
-
-      </div>
-      <!-- End of Main Content -->
-
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>SUIO</span>
           </div>
         </div>
-      </footer>
-      <!-- End of Footer -->
+
+      </div>
+      <!-- /.container-fluid -->
 
     </div>
-    <!-- End of Content Wrapper -->
+    <!-- End of Main Content -->
+
+    <!-- Footer -->
+    <footer class="sticky-footer bg-white">
+      <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+          <span>SUIO</span>
+        </div>
+      </div>
+    </footer>
+    <!-- End of Footer -->
 
   </div>
-  <!-- End of Page Wrapper -->
+  <!-- End of Content Wrapper -->
 
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+  <i class="fas fa-angle-up"></i>
+</a>
 
 
-  <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+<!-- Custom scripts for all pages-->
+<script src="js/sb-admin-2.min.js"></script>

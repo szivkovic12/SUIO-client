@@ -1,21 +1,21 @@
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Type list</h1>
+    <h1 class="h3 mb-0 text-gray-800">{{'type.listH1' | translate}}</h1>
 </div>
 
 <div class="panel-body">
     <table class="table table-striped">
       <thead>
-        <th scope="col">ID</th>
-        <th scope="col">Vrsta opreme</th>
+        <th scope="col">Id</th>
+        <th scope="col">{{'type.tableHeader' | translate}}</th>
         <th></th>
       </thead>
       <tbody>
         <tr *ngFor="let type of types" scope="row">
           <td>{{ type.id }}</td>
           <td>{{ type.name }}</td>
-          <td><button (click)="deleteType(type)"   class="btn btn-danger">Delete</button>
-            <button (click)="updateType(type)"  class="btn btn-info" style="margin-left: 10px">Update</button>
-            <button (click)="navigateToDetail(type)"  class="btn btn-info" style="margin-left: 10px">Details</button>
+          <td><button (click)="deleteType(type)"   class="btn btn-danger">{{'button.delete' | translate}}</button>
+            <button (click)="updateType(type)"  class="btn btn-info" style="margin-left: 10px">{{'button.update' | translate}}</button>
+            <button (click)="navigateToDetail(type)"  class="btn btn-info" style="margin-left: 10px">{{'button.detail' | translate}}</button>
         </td>
         </tr>
       </tbody>

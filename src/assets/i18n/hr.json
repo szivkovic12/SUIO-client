@@ -1,0 +1,29 @@
+{
+    "menu":{
+        "croatian": "Hrvatski",
+        "english": "Engleski",
+        "addNewType": "Dodaj novu grupu",
+        "typeList": "Lista grupa",
+        "newAsset": "Dodaj novu opremu",
+        "assetList": "Lista opreme",
+        "asset": "OPREMA",
+        "addEmpl": "Dodaj novog djelatnika",
+        "emplList": "Lista djelatnika",
+        "empl": "Djelatnici"
+    },
+    "button":{
+        "cancle": "Odustani",
+        "update": "Izmjeni",
+        "detail": "Detalji",
+        "save": "Spremi",
+        "back": "Nazad",
+        "delete": "Obriši"
+    },
+    "type":{
+        "listH1": "Tip opreme",
+        "tableHeader": "Naziv grupe",
+        "updateH1": "Izmjeni naziv",
+        "updateName": "Naziv",
+        "newH1": "Dodaj novu grupu"
+    }
+}

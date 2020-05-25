@@ -1,0 +1,29 @@
+{
+    "menu":{
+        "croatian": "Croatian",
+        "english": "English",
+        "addNewType": "Add new type",
+        "typeList": "Type List",
+        "newAsset": "Add new asset",
+        "assetList": "Asset list",
+        "asset": "ASSET",
+        "addEmpl": "Add new employess",
+        "emplList": "Employee list",
+        "empl": "Employees"
+    },
+    "button":{
+        "cancle": "Cancle",
+        "update": "Update",
+        "detail": "Detail",
+        "save": "Save",
+        "back": "Back",
+        "delete": "Delete"
+    },
+    "type":{
+        "listH1": "Type list",
+        "tableHeader": "Group name",
+        "updateH1": "Update description",
+        "updateName": "Description",
+        "newH1": "Add new type group"
+    }
+}
