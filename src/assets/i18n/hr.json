@@ -1,0 +1,21 @@
+{
+    "language":{
+        "croatian": "Hrvatski",
+        "english": "Engleski"
+    },
+    "button":{
+        "cancle": "Odustani",
+        "update": "Izmjeni",
+        "detail": "Detalji",
+        "save": "Spremi",
+        "back": "Nazad",
+        "delete": "Obriši"
+    },
+    "type":{
+        "listH1": "Tip opreme",
+        "tableHeader": "Naziv grupe",
+        "updateH1": "Izmjeni naziv",
+        "updateName": "Naziv",
+        "newH1": "Dodaj novu grupu"
+    }
+}

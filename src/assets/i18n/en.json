@@ -1,0 +1,21 @@
+{
+    "language":{
+        "croatian": "Croatian",
+        "english": "English"
+    },
+    "button":{
+        "cancle": "Cancle",
+        "update": "Update",
+        "detail": "Detail",
+        "save": "Save",
+        "back": "Back",
+        "delete": "Delete"
+    },
+    "type":{
+        "listH1": "Type list",
+        "tableHeader": "Group name",
+        "updateH1": "Update description",
+        "updateName": "Description",
+        "newH1": "Add new type group"
+    }
+}
