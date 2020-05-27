@@ -5,27 +5,27 @@
     <table class="table">
       <tbody>
         <tr>
-          <td>Serial Number</td>
+          <td>{{'asset.serialNumber' | translate}}</td>
           <td>{{ asset?.serialNumber }}</td>
         </tr>
         <tr>
-          <td>Product Number</td>
+          <td>{{'asset.productNumber' | translate}}</td>
           <td>{{ asset?.productNumber }}</td>
         </tr>
         <tr>
-            <td>Type ID</td>
+          <td>{{'asset.typeId' | translate}}</td>
             <td>{{ asset?.typeId }}</td>
           </tr>
           <tr>
-            <td>Date of Purchase</td>
-            <td>{{ asset?.dateOfPurchase | date:"medium" }}</td>
+            <td>{{'asset.dateOfPurchase' | translate}}</td>
+            <td>{{ asset?.sdateOfPurchase | date:"medium" }}</td>
           </tr>
           <tr>
-            <td>Status</td>
+            <td>{{'asset.status' | translate}}</td>
             <td>{{ asset?.status }}</td>
           </tr>
           <tr>
-            <td>Date of Disposal</td>
+            <td>{{'asset.dateOfDisposal' | translate}}</td>
             <td>{{ asset?.dateOfDisposal | date:"medium" }}</td>
           </tr>
       </tbody>

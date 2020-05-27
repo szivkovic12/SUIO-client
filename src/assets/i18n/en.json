@@ -44,6 +44,19 @@
         "dateOfEmployment":"Date of employment",
         "role":"Role",
         "department":"Department"
+    },       
+    "asset":{
+        "name":"Name",
+        "serialNumber":"Serial Number",
+        "productNumber":"Product Number",
+        "inventoryNumber": "Inventory number",
+        "typeId": "type ID",
+        "status": "Status",
+        "dateOfPurchase": "Date of purchase",
+        "dateOfDisposal":"Date of disposal",
+        "delete":"Delete",
+        "update":"Update",
+        "details":"Details"
     },   
      "login": {
         "title": "Login",
