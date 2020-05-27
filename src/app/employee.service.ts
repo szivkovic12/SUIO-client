@@ -38,7 +38,7 @@ export class EmployeeService {
   }
 
   updateEmployee(employee: Employee): Observable<any> {
-    const url = `${this.employeeUrl}/${employee.id}`;
+    const url = `${this.employeeUrl}+${employee.id}`;
     return this.http.put(url, employee).pipe(
       tap(_ => console.log(`updated employee`)),
       catchError(this.handleError<any>('updateEmployee'))
@@ -47,7 +47,7 @@ export class EmployeeService {
 
   deleteEmployee(employee: Employee | number): Observable<Employee> {
     const id = typeof employee === 'number' ? employee : employee.id;
-    const url = `${this.employeeUrl}/${id}`;
+    const url = `${this.employeeUrl}+${id}`;
 
     return this.http.delete<Employee>(url).pipe(
       tap(_ => console.log(`deleted employee id=${id}`)),

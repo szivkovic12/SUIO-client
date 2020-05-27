@@ -18,7 +18,7 @@ export class AssetCreateComponent implements OnInit {
     this.assetService.addAsset(this.asset).subscribe(
       (asset: Asset) => {
         this.asset = asset;
-        new Promise(resolve => setTimeout(resolve, 2000)).then(() => this.router.navigate(['assets']));
+        new Promise(resolve => setTimeout(resolve, 2000)).then(() => this.router.navigate(['home/assets']));
       }
     );
   }

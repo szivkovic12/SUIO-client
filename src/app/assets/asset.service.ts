@@ -35,7 +35,7 @@ export class AssetService {
   }
   
   updateAsset(asset: Asset): Observable<any> {
-    const url = `${this.assetsUrl}/${asset.id}`;
+    const url = `${this.assetsUrl}+${asset.id}`;
     return this.http.put(url, asset).pipe(
       tap(_ => console.log(`updated asset`)),
       catchError(this.handleError<any>('updateAsset'))

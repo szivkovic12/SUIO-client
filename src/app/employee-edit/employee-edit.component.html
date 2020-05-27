@@ -2,14 +2,14 @@
     <div class="card-body">
         <form #assetForm="ngForm">
             <div class="form-group">
-                <label>Name</label>
+                <label>{{'employee.name' | translate}}</label>
                 <input [(ngModel)]="employee.name" type="text" class="form-control" id="name" name="name"
                     placeholder="name" required>
             </div>
             <div class="form-group">
-                <label>Surname</label>
+                <label>{{'employee.surname' | translate}}</label>
                 <input [(ngModel)]="employee.surname" type="text" class="form-control" id="surname" name="surname"
-                    placeholder="serial number">
+                    placeholder="surname">
             </div>
             <div class="form-group">
                 <label>Oib</label>
@@ -22,28 +22,28 @@
                      maxlength="20" placeholder="email">
             </div>
             <div class="form-group">
-                <label>Date Of Purchase</label><br/>
+                <label>{{'employee.dateOfBirth' | translate}}</label><br/>
                 <input [(ngModel)]="employee.date_of_birth"  type="date" id="dateOfPurchase" name="dateOfPurchase">
             </div>    
             <div class="form-group">
-                <label>Department</label>
+                <label>{{'employee.department' | translate}}</label>
                 <input [(ngModel)]="employee.department" type="text" class="form-control" id="department" name="department"
                         maxlength="10" placeholder="status">
             </div>
             <div class="form-group">
-                <label>Role</label><br/>
+                <label>{{'employee.role' | translate}}</label><br/>
                 <input [(ngModel)]="employee.role" type="text" class="form-control" id="role" name="role"
                     maxlength="10" placeholder="role" required>
             </div>
-                <label>Date Of Employment</label><br/>
+                <label>{{'employee.dateOfEmployment' | translate}}</label><br/>
                 <input [(ngModel)]="employee.date_of_employment"  type="date" id="dateOfEmployee" name="dateOfEmployee">
             <div class="row">
                 <div class="col-md-12">
                     <div class="float-right">
-                        <button routerLink="/employee" class="btn btn-outline-secondary mr-4"
-                            type="button">Cancel</button>
+                        <button routerLink="/home/employee" class="btn btn-outline-secondary mr-4"
+                            type="button">{{'button.cancle' | translate}}</button>
                         <button (click)="update()" class="btn btn-success"
-                            type="button">Save
+                            type="button">{{'button.save' | translate}}
                         </button>
                     </div>
                 </div>

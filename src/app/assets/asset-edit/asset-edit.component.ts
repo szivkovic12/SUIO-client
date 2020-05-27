@@ -28,7 +28,7 @@ export class AssetEditComponent implements OnInit {
     this.assetService.updateAsset(this.asset).subscribe(
       (asset: Asset) => {
         this.asset = asset;
-        new Promise(resolve => setTimeout(resolve, 200)).then(() => this.router.navigate(['assets']));
+        new Promise(resolve => setTimeout(resolve, 200)).then(() => this.router.navigate(['home/assets']));
       }
     );
   }

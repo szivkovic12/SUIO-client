@@ -28,7 +28,7 @@ export class EmployeeEditComponent implements OnInit {
     this.employeeService.updateEmployee(this.employee).subscribe(
       (employee: Employee) => {
         this.employee = employee;
-        new Promise(resolve => setTimeout(resolve, 200)).then(() => this.router.navigate(['employee']));
+        new Promise(resolve => setTimeout(resolve, 200)).then(() => this.router.navigate(['home/employee']));
       }
     );
   }

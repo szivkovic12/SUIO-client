@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Employee } from '../employee.model';
 import { EmployeeService } from '../employee.service';
 import { Router } from '@angular/router';
+import { UserService } from '../user/user.service';
 
 @Component({
   selector: 'app-employee-list',
@@ -13,7 +14,7 @@ export class EmployeeListComponent implements OnInit {
   toastrService: any;
  
 
-  constructor(private employeeService: EmployeeService, private router:Router) { }
+  constructor(private employeeService: EmployeeService, private router:Router,public userService: UserService) { }
   ngOnInit(): void {
     this.getEmployee();
   }
@@ -32,12 +33,12 @@ export class EmployeeListComponent implements OnInit {
 
     updateEmployee(employee: Employee){
       this.employees= this.employees.filter(e => e !== employee);
-      this.router.navigate(['/employee/edit', employee.id])
+      this.router.navigate(['home/employee/edit', employee.id])
     }
 
     navigateToDetail(employee: Employee){
       this.employees= this.employees.filter(e => e !== employee);
-      this.router.navigate(['/employee/details/', employee.id])
+      this.router.navigate(['home/employee/details/', employee.id])
     }
 
 

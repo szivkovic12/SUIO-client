@@ -26,7 +26,7 @@ export class NoviTipComponent implements OnInit {
     this.typeService.addType(this.type).subscribe(
       (type: Type) => {
         this.type = type;
-        new Promise(resolve => setTimeout(resolve,2000)).then(()=>this.router.navigate(['type']));
+        new Promise(resolve => setTimeout(resolve,2000)).then(()=>this.router.navigate(['home/type']));
         this.toAstrService.success('Uspješno ste spremili podatke zaposlenika!');
       },
       () => {
