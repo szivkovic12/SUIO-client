@@ -45,6 +45,19 @@
         "role":"Rola",
         "department":"Odjel"
     }, 
+    "asset":{
+        "name":"Ime",
+        "serialNumber":"Serijski broj",
+        "productNumber":"Broj produkta",
+        "inventoryNumber": "Broj inventara",
+        "typeId": "Tip",
+        "status": "Status",
+        "dateOfPurchase": "Datum kupnje",
+        "dateOfDisposal":"Datum odlaganja",
+        "delete":"Obriši",
+        "update":"Izmjeni",
+        "details":"Detalji"
+    }, 
     "login": {
         "title": "Prijava",
         "username": "Korisničko ime",
