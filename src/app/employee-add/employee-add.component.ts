@@ -31,7 +31,7 @@ export class EmployeeAddComponent implements OnInit {
     this.employeeService.addEmployee(this.employee).subscribe(
       (employee: Employee) => {
         this.employee = employee;
-        new Promise(resolve => setTimeout(resolve,2000)).then(()=>this.router.navigate(['employee']));
+        new Promise(resolve => setTimeout(resolve,2000)).then(()=>this.router.navigate(['home/employee']));
         this.toastrService.success('Uspješno ste spremili podatke zaposlenika!');
       },
       () => {

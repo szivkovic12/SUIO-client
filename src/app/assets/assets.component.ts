@@ -27,13 +27,13 @@ export class AssetsComponent implements OnInit {
   }
   updateAsset(asset: Asset){
     this.assets= this.assets.filter(e => e !== asset);
-    this.router.navigate(['/assets/edit', asset.id])
+    this.router.navigate(['home/assets/edit', asset.id])
   }
   navigateToDetail(asset: Asset){
     this.assets= this.assets.filter(e => e !== asset);
-    this.router.navigate(['/assets/details/', asset.id])
+    this.router.navigate(['home/assets/details/', asset.id])
   }
   navigateToCreate(): void {
-    this.router.navigate(['/assets/create'])
+    this.router.navigate(['home/assets/create'])
   }
 }

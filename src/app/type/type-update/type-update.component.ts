@@ -35,7 +35,7 @@ export class TypeUpdateComponent implements OnInit {
     this.typeService.updateType(this.type).subscribe(
       (type: Type) => {
         this.type = type;
-        new Promise(resolve => setTimeout(resolve, 200)).then(() => this.router.navigate(['type']));
+        new Promise(resolve => setTimeout(resolve, 200)).then(() => this.router.navigate(['home/type']));
       }
     );
   }

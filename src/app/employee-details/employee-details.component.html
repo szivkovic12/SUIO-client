@@ -5,11 +5,11 @@
     <table class="table">
       <tbody>
         <tr>
-          <td>Name</td>
+          <td>{{'employee.name' | translate}}</td>
           <td>{{ employee?.name }}</td>
         </tr>
         <tr>
-          <td>Surname</td>
+          <td>{{'employee.surname' | translate}}</td>
           <td>{{ employee?.surname }}</td>
         </tr>
         <tr>
@@ -17,15 +17,15 @@
             <td>{{ employee?.email }}</td>
           </tr>
           <tr>
-            <td>Date of Birth</td>
+            <td>{{'employee.dateOfBirth' | translate}}</td>
             <td>{{ employee?.date_of_birth | date:"medium" }}</td>
           </tr>
           <tr>
-            <td>Role</td>
+            <td>{{'employee.role' | translate}}</td>
             <td>{{ employee?.role }}</td>
           </tr>
           <tr>
-            <td>Date of Employment</td>
+            <td>{{'employee.dateOfEmployment' | translate}}</td>
             <td>{{ employee?.date_of_employment | date:"medium" }}</td>
           </tr>
       </tbody>

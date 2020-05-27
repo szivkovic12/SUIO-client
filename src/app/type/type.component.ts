@@ -26,7 +26,7 @@ export class TypeComponent implements OnInit {
   
   navigateToDetail(type: Type){
     this.types= this.types.filter(e => e !== type);
-    this.router.navigate(['/type/', type.id])
+    this.router.navigate(['home/type/', type.id])
   }
 
   deleteType(type: Type){
@@ -36,7 +36,7 @@ export class TypeComponent implements OnInit {
 
   updateType(type: Type){
     this.types = this.types.filter(e => e !== type);
-    this.router.navigate(['type/update', type.id])
+    this.router.navigate(['home/type/update', type.id])
   }
  
 

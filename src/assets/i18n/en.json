@@ -10,6 +10,12 @@
         "addEmpl": "Add new employess",
         "emplList": "Employee list",
         "empl": "Employees"
+    }, 
+      "navbar": {
+        "username": "Username",
+        "role": "Role",
+        "login": "Login",
+        "logout": "Logout"
     },
     "button":{
         "cancle": "Cancle",
@@ -25,5 +31,25 @@
         "updateH1": "Update description",
         "updateName": "Description",
         "newH1": "Add new type group"
+    },
+    "employee":{
+        "name":"Name",
+        "surname":"Surname",
+        "oib":"Oib",
+        "email":"Email",
+        "delete":"Delete",
+        "update":"Update",
+        "details":"Detail",
+        "dateOfBirth":"Date of birth",
+        "dateOfEmployment":"Date of employment",
+        "role":"Role",
+        "department":"Department"
+    },   
+     "login": {
+        "title": "Login",
+        "username": "Username",
+        "password": "Password",
+        "loginButton": "Login",
+        "loginError": "Login failed! Check your credentials and try again."
     }
 }

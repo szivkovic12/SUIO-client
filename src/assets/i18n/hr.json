@@ -11,6 +11,12 @@
         "emplList": "Lista djelatnika",
         "empl": "Djelatnici"
     },
+    "navbar": {
+        "username": "Korisničko ime",
+        "role": "Uloga",
+        "login": "Prijava",
+        "logout": "Odjava"
+    },
     "button":{
         "cancle": "Odustani",
         "update": "Izmjeni",
@@ -25,5 +31,26 @@
         "updateH1": "Izmjeni naziv",
         "updateName": "Naziv",
         "newH1": "Dodaj novu grupu"
+    },
+    "employee":{
+        "name":"Ime",
+        "surname":"Prezime",
+        "oib":"Oib",
+        "email":"Email",
+        "delete":"Obriši",
+        "update":"Izmjeni",
+        "details":"Detalji",
+        "dateOfBirth":"Datum rođenja",
+        "dateOfEmployment":"Datum zaposlenja",
+        "role":"Rola",
+        "department":"Odjel"
+    }, 
+    "login": {
+        "title": "Prijava",
+        "username": "Korisničko ime",
+        "password": "Lozinka",
+        "loginButton": "Prijava",
+        "loginError": "Neuspješna prijava! Provjerite podatke i pokušajte ponovno."
     }
+    
 }

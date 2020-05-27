@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule, HttpClient }    from '@angular/common/http';
+import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS }    from '@angular/common/http';
 import { AssetsComponent } from './assets/assets.component';
 import { EmployeeAddComponent } from './employee-add/employee-add.component';
 import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
@@ -19,6 +19,12 @@ import { NoviTipComponent } from './novi-tip/novi-tip.component';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LoginComponent } from './login/login.component';
+import { ForbiddenPageComponent } from './forbidden-page/forbidden-page.component';
+import { HomeComponent } from './home/home.component';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { AuthExpiredInterceptor } from './interceptors/auth-expired.inteceptor';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -38,8 +44,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     AssetDetailsComponent,
     TypeDetailComponent,
     TypeUpdateComponent,
-    NoviTipComponent
-
+    NoviTipComponent,
+    LoginComponent,
+    ForbiddenPageComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +63,18 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS, 
+      useClass: AuthInterceptor,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS, 
+      useClass: AuthExpiredInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
